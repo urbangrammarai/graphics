@@ -1,6 +1,8 @@
 # graphics
 Visual style for Urban Grammar AI research project
 
+See the Jupyter notebook in `examples` for an illustration of usage.
+
 Available visual presets:
 
 - `RGB` - 256 RGB codes
