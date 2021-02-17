@@ -2,4 +2,4 @@ from .graphics import *
 
 __author__ = "Martin Fleischmann"
 __author_email__ = "martin@martinfleischmann.net"
-__version__ = "1.0.0"
+__version__ = "1.1.0"

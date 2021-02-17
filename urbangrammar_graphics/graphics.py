@@ -3,7 +3,7 @@ from matplotlib.colors import ListedColormap
 import matplotlib.pyplot as plt
 from random import shuffle
 import numpy as np
-
+from contextily._providers import TileProvider
 
 # 256 RGB codes
 RGB = [
@@ -43,20 +43,26 @@ def get_colormap(n=18, randomize=True):
 def get_tiles(tiles, token):
     """Get links to Mapbox tiles"""
     if tiles == "roads":
-        return (
-            "https://api.mapbox.com/styles/v1/martinfleis/ckl6jkuwe3uxa17mrhnp78e62/tiles/256/{z}/{x}/{y}@2x?access_token="
-            + token
+        return TileProvider(
+            url="https://api.mapbox.com/styles/v1/martinfleis/ckl6jkuwe3uxa17mrhnp78e62/tiles/256/{z}/{x}/{y}@2x?access_token={accessToken}",
+            attribution="(C) Mapbox (C) OpenStreetMap contributors",
+            accessToken=token,
+            name="MapBox Roads",
         )
 
     if tiles == "labels":
-        return (
-            "https://api.mapbox.com/styles/v1/martinfleis/ckl6n87ha0tol17o61wxhfnbo/tiles/256/{z}/{x}/{y}@2x?access_token="
-            + token
+        return TileProvider(
+            url="https://api.mapbox.com/styles/v1/martinfleis/ckl6n87ha0tol17o61wxhfnbo/tiles/256/{z}/{x}/{y}@2x?access_token={accessToken}",
+            attribution="(C) Mapbox (C) OpenStreetMap contributors",
+            accessToken=token,
+            name="MapBox Labels",
         )
     if tiles == "background":
-        return (
-            "https://api.mapbox.com/styles/v1/martinfleis/ckl6okytj5fg317mvpgc9tc6k/tiles/256/{z}/{x}/{y}@2x?access_token="
-            + token
+        return TileProvider(
+            url="https://api.mapbox.com/styles/v1/martinfleis/ckl6okytj5fg317mvpgc9tc6k/tiles/256/{z}/{x}/{y}@2x?access_token={accessToken}",
+            attribution="(C) Mapbox (C) OpenStreetMap contributors",
+            accessToken=token,
+            name="MapBox Background",
         )
 
 
