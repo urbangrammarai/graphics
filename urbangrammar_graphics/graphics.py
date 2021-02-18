@@ -1,5 +1,5 @@
 import seaborn as sns
-from matplotlib.colors import ListedColormap
+from matplotlib.colors import ListedColormap, to_hex
 import matplotlib.pyplot as plt
 from random import shuffle
 import numpy as np
@@ -17,6 +17,9 @@ RGB = [
 
 # 0-1 RGB codes
 COLORS = [tuple(x / 256 for x in c) for c in RGB]
+
+# HEX codes
+HEX = [to_hex(c) for c in COLORS]
 
 # diverging palette
 DIVERGING = sns.diverging_palette(235, 16, 60, 44)

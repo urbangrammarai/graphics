@@ -1,12 +1,13 @@
-# graphics
+# Urban Grammar AI graphics
 Visual style for Urban Grammar AI research project
 
 See the Jupyter notebook in `examples` for an illustration of usage.
 
 Available visual presets:
 
-- `RGB` - 256 RGB codes
+- `RGB` - 0-256 RGB codes
 - `COLORS` - 0-1 RGB codes
+- `HEX` - HEX codes
 - `DIVERGING` - diverging seaborn palette
 - `CMAP` - matplotlib colormap (6 primary colors)
 - `get_colormap(n=18, randomize=True)` - Get expanded colormap
@@ -14,7 +15,7 @@ Available visual presets:
 
 - `north_arrow(f, ax, rotation=0, loc="upper left", size=0.02, linewidth=3, color="k", pad=0, alpha=1,)` - Create north arrow
 
-```rst
+```
 north_arrow parameters
 ----------------------
 
@@ -29,7 +30,7 @@ loc : string
     location of an arrow
 
 size : float
-    float denoting the length/width of the a in terms
+    float denoting the length/width in terms
     of a fraction of the axis.
 
 linewidth : float
