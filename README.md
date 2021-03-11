@@ -7,7 +7,7 @@ Available visual presets:
 
 - `RGB` - 0-256 RGB codes
 - `COLORS` - 0-1 RGB codes
-- `HEX` - HEX codes
+- `HEX` - HEX codes (`['#333432', '#3b6e8c', '#bc5b4f', '#8fa37e', '#efc758', '#94666e']`)
 - `DIVERGING` - diverging seaborn palette
 - `CMAP` - matplotlib colormap (6 primary colors)
 - `get_colormap(n=18, randomize=True)` - Get expanded colormap
