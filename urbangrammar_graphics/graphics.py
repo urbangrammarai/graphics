@@ -24,6 +24,9 @@ HEX = [to_hex(c) for c in COLORS]
 # diverging palette
 DIVERGING = sns.diverging_palette(235, 16, 60, 44)
 
+# diverging palette
+DIVERGING_MPL = sns.diverging_palette(235, 16, 60, 44, as_cmap=True)
+
 # matplotlib colormap
 palette = sns.color_palette(COLORS)
 CMAP = ListedColormap(palette)

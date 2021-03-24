@@ -9,6 +9,7 @@ Available visual presets:
 - `COLORS` - 0-1 RGB codes
 - `HEX` - HEX codes (`['#333432', '#3b6e8c', '#bc5b4f', '#8fa37e', '#efc758', '#94666e']`)
 - `DIVERGING` - diverging seaborn palette
+- `DIVERGING_MPL` - diverging matplotlib palette
 - `CMAP` - matplotlib colormap (6 primary colors)
 - `get_colormap(n=18, randomize=True)` - Get expanded colormap
 - `get_tiles(tiles, token)` - Get links to Mapbox tiles. `tiles` can be `"roads"`, `"labels"` or `"background"`
