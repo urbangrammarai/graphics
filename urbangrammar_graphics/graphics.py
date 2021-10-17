@@ -3,7 +3,7 @@ from matplotlib.colors import ListedColormap, to_hex
 import matplotlib.pyplot as plt
 from random import shuffle
 import numpy as np
-from contextily._providers import TileProvider
+from xyzservices import TileProvider
 
 # 256 RGB codes
 RGB = [
