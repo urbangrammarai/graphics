@@ -13,6 +13,7 @@ Available visual presets:
 - `CMAP` - matplotlib colormap (6 primary colors)
 - `get_colormap(n=18, randomize=True)` - Get expanded colormap
 - `get_tiles(tiles, token)` - Get links to Mapbox tiles. `tiles` can be `"roads"`, `"labels"` or `"background"`
+- `get_signature_colors(name=True)` - Get a dictionary mapping colors to signature types in Great Britain
 
 - `north_arrow(f, ax, rotation=0, loc="upper left", size=0.02, linewidth=3, color="k", pad=0, alpha=1,)` - Create north arrow
 

@@ -33,7 +33,7 @@ CMAP = ListedColormap(palette)
 
 
 def get_colormap(n=18, randomize=True):
-    """"Get expanded colormap"""
+    """ "Get expanded colormap"""
     n_colors = np.ceil(n / 6) + 1
 
     cols = []
@@ -202,3 +202,71 @@ def north_arrow(
     arrax.get_yaxis().set_visible(False)
     arrax.get_xaxis().set_visible(False)
     return arrax
+
+
+def get_signature_colors(name=True):
+    """
+    Get a dictionary of colors mapped to signatures classes of Great Britain
+
+    Parameters
+    ----------
+
+    name : bool
+        `True` maps to names, `False` maps to string keys (e.g. `'2_1'`)
+
+    Returns
+    -------
+    dict
+    """
+    cols = get_colormap(20, randomize=False).colors
+
+    key = {
+        "0_0": cols[16],
+        "1_0": cols[15],
+        "3_0": cols[9],
+        "4_0": cols[12],
+        "5_0": cols[21],
+        "6_0": cols[8],
+        "7_0": cols[4],
+        "8_0": cols[18],
+        "2_0": cols[6],
+        "2_1": cols[23],
+        "2_2": cols[19],
+        "9_0": cols[7],
+        "9_1": cols[3],
+        "9_2": cols[22],
+        "9_3": cols[0],  # outlier
+        "9_4": cols[11],
+        "9_5": cols[14],
+        "9_6": cols[0],  # outlier
+        "9_7": cols[0],  # outlier
+        "9_8": cols[0],  # outlier
+    }
+
+    if name:
+        types = {
+            "0_0": "Countryside agriculture",
+            "1_0": "Accessible suburbia",
+            "3_0": "Open sprawl",
+            "4_0": "Wild countryside",
+            "5_0": "Warehouse/Park land",
+            "6_0": "Gridded residential quarters",
+            "7_0": "Urban buffer",
+            "8_0": "Disconnected suburbia",
+            "2_0": "Dense residential neighbourhoods",
+            "2_1": "Connected residential neighbourhoods",
+            "2_2": "Dense urban neighbourhoods",
+            "9_0": "Local urbanity",
+            "9_1": "Concentrated urbanity",
+            "9_2": "Regional urbanity",
+            "9_4": "Metropolitan urbanity",
+            "9_5": "Hyper concentrated urbanity",
+            "9_3": "outlier",
+            "9_6": "outlier",
+            "9_7": "outlier",
+            "9_8": "outlier",
+        }
+
+        return {v: key[k] for k, v in types.items()}
+
+    return key
